@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/sidebar.css" />
+    <link rel="stylesheet" href="./style/content.css" />
+  </head>
+  <body>
+    <div id="main">
+      <div id="sidebar"></div>
+      <div id="content"></div>
+    </div>
+  </body>
+</html>
+<script type="module">
+  // Your API key is: 29906427867242f99281288cf5c52d70
+  // GET https://newsapi.org/v2/everything?q=bitcoin&apiKey=29906427867242f99281288cf5c52d70
+  let data_div = document.getElementById("content");
+  import sidebar from "./components/sidebar.js";
+  import { apiCall, appendArticles } from "./script/main.js";
+
+  let side = document.getElementById("sidebar");
+  side.innerHTML = sidebar();
+
+  let response = apiCall(
+    "https://newsapi.org/v2/top-headlines?q=india&apiKey=29906427867242f99281288cf5c52d70"
+  );
+
+  response.then((res) => {
+    appendArticles(res, data_div);
+  });
+</script>

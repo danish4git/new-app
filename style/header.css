@@ -1,0 +1,12 @@
+#header {
+  display: flex;
+  margin: auto;
+  background-color: chartreuse;
+  border: 1px solid red;
+  justify-content: center;
+  align-items: center;
+}
+input {
+  width: 800px;
+  padding: 10px;
+}

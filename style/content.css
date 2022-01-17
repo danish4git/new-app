@@ -1,0 +1,41 @@
+#content {
+  flex: 5;
+
+  height: 100vh;
+  overflow-y: scroll;
+}
+#content > div {
+  display: flex;
+  /* justify-content: space-between; */
+  height: 300px;
+  /* gap: 30px; */
+  /* margin-bottom: 20px; */
+  align-items: flex-start;
+
+  /* padding: 10px; */
+  line-height: 30px;
+  border-bottom: 2px solid grey;
+}
+#content > div > div {
+  /* width: 20%; */
+  /* border: 2px solid red; */
+  width: 33.33%;
+  margin-left: 10px;
+  /* width: ; */
+}
+#content > div > div > h1 {
+  line-height: 40px;
+}
+#content > div > p {
+  /* border: 1px solid green; */
+  width: 33.33%;
+  margin-left: 10px;
+}
+#content > div > img {
+  /* width: 400px; */
+  /* border: 1px solid blue; */
+  width: 33.33%;
+  margin-left: 10px;
+  margin-top: 17px;
+  height: 260px;
+}
